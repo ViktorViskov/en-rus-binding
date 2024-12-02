@@ -27,6 +27,9 @@ const keyBindings = {
     "X": "Ч",
     "Y": "Н",
     "Z": "Я",
+    "<": "Б",
+    ">": "Ю",
+    '"': "Э",
     "a": "ф",
     "b": "и",
     "c": "с",
@@ -53,6 +56,9 @@ const keyBindings = {
     "x": "ч",
     "y": "н",
     "z": "я",
+    ",": "б",
+    ".": "ю",
+    "'": "э",
     " ": " ",
     "1": "1",
     "2": "2",
@@ -74,6 +80,10 @@ async function showMessage(text) {
 
 document.addEventListener('keydown', function (event) {
     const key = event.key;
+
+    if (event.ctrlKey == true) {
+        return
+    }
     
     if (key === 'Escape') {
         inputText.textContent = '';
