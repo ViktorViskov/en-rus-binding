@@ -85,7 +85,7 @@ document.addEventListener('keydown', function (event) {
         return
     }
     
-    if (key === 'Escape') {
+    if (key === 'Delete') {
         inputText.textContent = '';
         showMessage('cleared ');
         return
